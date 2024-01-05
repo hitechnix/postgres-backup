@@ -89,7 +89,7 @@ services:
   backup:
     container_name: postgres-backup
     restart: unless-stopped
-    image: hitechnix/postgres-backup-s3:16
+    image: hitechnix/postgres-backup:16
     environment:
       - SCHEDULE=${SCHEDULE:-@weekly}
       - BACKUP_KEEP_DAYS=${BACKUP_KEEP_DAYS:-7}
